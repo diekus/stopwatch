@@ -1,11 +1,96 @@
+:root{
+    --ui-font-size: 1.3rem;
+}
+
 
 * {
     box-sizing: border-box;
 }
 
-body {
-    background: rgb(255,176,43);
-    background: linear-gradient(45deg, rgba(255,176,43,1) 0%, rgba(0,255,224,1) 100%);
-    height: 100vh;
+html {
+    height: 90dvh;
+}
 
+body {
+    background: #C9E7EC;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    font-family: sans-serif;
+    font-size: var(--ui-font-size);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-items: stretch;
+}
+
+h2 {
+    font-family: "Tilt Neon", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "XROT" 0, "YROT" 0;
+}
+
+.tilt-neon-font {
+  font-family: "Tilt Neon", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+}
+
+input[type="number"] {
+  background: transparent;
+  font-size: var(--ui-font-size);
+  text-align: right;
+  border: none;
+  border-bottom: solid var(--txtUnderline) 1px;
+  width: 4rem;
+}
+
+input[type="button"] {
+  font-size: var(--ui-font-size);
+}
+
+select {
+  font-size: var(--ui-font-size);
+}
+
+.notReqSpan {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.statusMessage {
+  color: var(--statusMessageFg);
+}
+
+.statusMessages {
+  margin: 2rem;
+  padding: 1rem;
+  background-color: var(--statusMessageBg);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+#lblTimer {
+  font-family: "Tilt Neon", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "XROT" 0, "YROT" 0;
+  font-size: 4rem;
+  align-self: center;
+  display: block;
 }

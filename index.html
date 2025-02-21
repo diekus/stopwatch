@@ -4,16 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="app.js"></script>
+    <script src="scripts/stopwatch.js" defer></script>
     <link href="style/app.css" rel="stylesheet">
+    <link href="style/light.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="manifest" href="manifest.json"/>
+    <meta name="application-title" content=""/>
     <title>stoPWAtch!</title>
 </head>
 <body>
-    <h1>stoPWAtch!</h1>
 
-    <form>
-        <input type="text" placeholder="10">
-        <input type="button" value="start timer">
-    </form>
+    <h1><img src="images/stopwatch-logo.svg" height="40px"></h1>
+
+    <section>
+        <h2>timer</h2>
+        <p></p>
+        <form>
+            Set a timer for
+            <input type="number" placeholder="10" value="10" id="numMinutes" min="1" step="1" max="60">
+            minutes
+            <label for="notifyStopWatch">
+                <input type="checkbox" id="notifyStopWatch" name="notifyStopWatch">
+                and notify me
+            </label>
+            <select name="notifyInterval" id="selNotifyEvery">
+                <option value="15000">every 15 seconds</option>
+                <option value="30000"> every 30 seconds</option>
+                <option value="60000">every 1 minute</option>
+                <!--option value="120000">every  2 minutes</option>
+                <option value="300000">every 5 minutes</option>
+                <option value="600000">every 10 minutes</option-->
+            </select>
+            <input type="button" value="start" id="btnStart">
+        </form>
+        <p id="lblTimer" class="lblTimer">00:00</p>
+    </section>
+    
+    <section id="statusMessages" class="statusMessages">
+        <label id="statusMessage" class="statusMessage"></label>
+        <input type="button" value="enable notifications" id="btnReqNot">
+    </section>
     
     
 </body>

@@ -1,0 +1,20 @@
+{
+    "short_name": "stoPWAtch",
+    "name": "The stoPWAtch!",
+    "icons": [
+      {
+        "src": "./images/stopwatch-icon64.png",
+        "sizes": "64x64",
+        "type": "image/png"
+      },
+      {
+        "src": "./images/stopwatch-icon512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#C9E7EC",
+    "background_color": "#C9E7EC"
+  }
